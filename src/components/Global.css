@@ -58,3 +58,6 @@ background-color: gray;
 cursor: pointer;
   transition: all 1.5s;
 }
+.list{
+  text-decoration: none;
+}
