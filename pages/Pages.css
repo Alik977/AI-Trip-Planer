@@ -107,3 +107,79 @@ color: #b7ff3c;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(183, 255, 60, 0.25);
 }
+/****Tripplaner*****/
+.AitripH1 {
+  color: white;
+  padding: 20px 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.homebottom1 {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.homebottom1 {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.tripinput1 {
+  width: min(550px, 100%);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+color: #b7ff3c;
+  backdrop-filter: blur(12px);
+}
+
+.tripinput1 input {
+  flex: 1;
+  height: 55px;
+  padding: 0 18px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: white;
+  font-size: 6px;
+}
+
+.tripinput1 input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.tripaibutton1 {
+  height: 50px;
+  padding: 0 24px;
+  width: min(550px, 100%);
+  border: none;
+  border-radius: 13px;
+
+  background: #b7ff3c;
+  color: #111;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.tripaibutton1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(183, 255, 60, 0.25);
+}
