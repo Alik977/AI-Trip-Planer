@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  background-image: url(.//../src/assets/img/backgrounf.png);
+  background-size: cover;
 }
 /*----------Navbar---------*/
 .Navbar {

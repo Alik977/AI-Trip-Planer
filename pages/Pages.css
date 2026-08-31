@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-color: black;
+  background-image: url(.//../src/assets/img/backgrounf.png);
+  background-size: cover;
 }
 /*home*/
 .home {
@@ -197,7 +198,7 @@ color: #b7ff3c;
   align-items: center;
   justify-content: center;
 
-  background: #000;
+
 }
 
 /* =========================
@@ -456,4 +457,60 @@ color: #b7ff3c;
 .formtext1 option {
   background: #111;
   color: #b7ff3c;
+}
+/*bottom buttons*/
+.preferences {
+  width: 100%;
+  max-width: 700px;
+  padding: 10px;
+  background: #000;
+  color: white;
+}
+
+.preference-section {
+  margin-bottom: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.preference-section h3 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: #f5f5f5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buttons button {
+  background: #111;
+  color: #eee;
+  border: 1px solid #292929;
+  border-radius: 8px;
+  padding: 11px 19px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.buttons button:hover {
+  border-color: #b6ff00;
+  transform: translateY(-1px);
+}
+
+.buttons button.selected {
+  color: #b6ff00;
+  border-color: #b6ff00;
+  background: #111;
+  box-shadow: 0 0 8px rgba(182, 255, 0, 0.2);
 }
