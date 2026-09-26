@@ -4,6 +4,7 @@ import Home from "../pages/Home.jsx";
 import Planner from "../pages/Planner.jsx";
 import Distination from "./components/DestinationCard.jsx";
 import About from "../pages/About.jsx";
+import Contact from "./components/Contact.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
@@ -18,6 +19,9 @@ function App() {
         <Route path="/Trip" element={<Planner />}></Route>
         <Route path="/Dest" element={<Distination />}></Route>
         <Route path="/About" element={<About />}></Route>
+        <Route path="/Contact" element={<Contact />}>
+          {" "}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
