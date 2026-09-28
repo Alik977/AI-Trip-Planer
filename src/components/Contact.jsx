@@ -1,4 +1,5 @@
 import "./Global.css";
+import contact from "..//assets/img/icon contact/contact_info.png";
 function Contact() {
   return (
     <div className="allcontact">
@@ -15,6 +16,18 @@ function Contact() {
           or simply want to say hello, feel free to get in touch with us. Let’s
           make your next journey unforgettable. ✈️
         </p>
+      </div>
+      <div className="formscontact">
+        <div className="contactinfo">
+          {" "}
+          <form action="Contact">
+            <h3 className="contactname">
+              {" "}
+              <img src={contact} alt="" className="contactimg" />
+              Contact information <span className="linecontact">______</span>
+            </h3>
+          </form>
+        </div>
       </div>
     </div>
   );

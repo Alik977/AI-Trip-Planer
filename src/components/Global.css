@@ -629,31 +629,50 @@ body {
   overflow: hidden;
 }
 /*contact*/
-.leftblock{
-  padding:20px 40px;
+.leftblock {
+  padding: 20px 40px;
 }
-.line{
+.line {
   color: #b9ef00;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.adventure{
+.adventure {
   color: #b9ef00;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.leftblokh3{
+.leftblokh3 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 15px 0px;
 }
-.leftblokh1{
+.leftblokh1 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 450px;
   font-size: 45px;
   padding: 10px 0px;
 }
-.contact{
+.contact {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 40%;
+}
+.contactimg {
+  width: 50px;
+  height: 50px;
+}
+.contactname {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.linecontact {
+  color: #b9ef00;
+}
+.formscontact {
+  border: 2px solid gray;
+  width: 40%;
+ margin-left: 40px;
+}
+.contactinfo {
+  padding: 20px 40px;
 }
