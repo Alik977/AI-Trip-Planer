@@ -1,16 +1,18 @@
 import "../pages/Pages.css";
 import { useState } from "react";
-
+import { useLocation } from "react-router-dom";
 
 const API_BASE_URL = "http://localhost:3001";
 
 function Planner() {
+  const location = useLocation();
+  const initialPrompt = location.state?.prompt ?? "";
+
   // Trip form fields
-  const [destination, setDestination] = useState("");
+  const [destination, setDestination] = useState(initialPrompt);
   const [days, setDays] = useState("1");
   const [budget, setBudget] = useState("");
-  const [aiPrompt, setAiPrompt] = useState("");
-
+  const [aiPrompt, setAiPrompt] = useState(initialPrompt);
   // Preferences
   const [travelStyle, setTravelStyle] = useState("Relaxed");
   const [interests, setInterests] = useState(["Food"]);

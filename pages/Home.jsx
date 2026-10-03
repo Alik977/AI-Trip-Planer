@@ -11,8 +11,9 @@ import about8 from "../src/assets/img/italy.jpg";
 import about9 from "../src/assets/img/sweeden.jpg";
 import about10 from "../src/assets/img/Spain.jpg";
 import plan from "../src/assets/img/plan.png";
-
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Trip from "./Planner";
 
 function Home() {
   const slides = [
@@ -88,6 +89,13 @@ function Home() {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+  const navigate = useNavigate();
+const [prompt, setPrompt] = useState("");
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  navigate("/Trip", { state: { prompt } });
+};
 
   const getSlideClass = (index) => {
     const total = slides.length;
@@ -164,15 +172,18 @@ function Home() {
         </div>
       </div>
 
-      <div className="homebottom">
+      <form className="homebottom" onSubmit={handleSubmit}>
         <input
           type="text"
           className="tripinput"
-          placeholder="Ask AI to plan your trip... ⭐"
+          aria-label="Describe your trip"
+          value={prompt}
+          onChange={(event) => setPrompt(event.target.value)}
+          placeholder="Where would you like to go? ✨"
         />
 
-        <button className="tripaibutton">Generate My Trip ✨</button>
-      </div>
+        <button type="submit" className="tripaibutton">Generate My Trip ✨</button>
+      </form>
     </div>
   );
 }

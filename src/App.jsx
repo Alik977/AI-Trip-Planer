@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import Navbar from "./components/Navbar.jsx";
 import Home from "../pages/Home.jsx";
 import Planner from "../pages/Planner.jsx";
@@ -13,18 +13,21 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/Trip" element={<Planner />}></Route>
-        <Route path="/Dest" element={<Distination />}></Route>
-        <Route path="/About" element={<About />}></Route>
-        <Route path="/Contact" element={<Contact />}>
-          {" "}
-        </Route>
+        <Route path="/home" element={<Home />} />
+
+        <Route path="/Trip" element={<Planner />} />
+        <Route path="/planner" element={<Planner />} />
+
+        <Route path="/Dest" element={<Distination />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
