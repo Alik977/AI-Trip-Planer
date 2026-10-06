@@ -12,8 +12,7 @@ body {
   padding: 10px 40px;
   display: flex;
   justify-content: space-between;
-  position: sticky;
-  z-index: 9999;
+
   align-items: center;
   top: 0;
   background-color: transparent;
@@ -664,6 +663,10 @@ body {
 .contactname {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  vertical-align: middle;
+}
+.contactname img {
+  vertical-align: middle;
 }
 .linecontact {
   color: #b9ef00;
@@ -671,13 +674,183 @@ body {
 .formscontact {
   border: 2px solid gray;
   width: 40%;
- margin-left: 40px;
- border-radius: 15px;
+  margin-left: 40px;
+  border-radius: 15px;
+  background-color: #000;
 }
 .contactinfo {
   padding: 20px 40px;
 }
-.Emailimg{
-   width: 40px;
+.Emailimg {
+  width: 40px;
   height: 40px;
+}
+.emailcontact a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+.emailcontact img {
+  vertical-align: middle;
+}
+.phonecontact a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.phonecontact img {
+  vertical-align: middle;
+}
+.globalcontact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contactrighy {
+  width: 40%;
+  margin-right: 40px;
+  padding: 32px 36px 36px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+  background: #000;
+  box-shadow: 0 0 60px rgba(183, 255, 60, 0.06);
+}
+
+/* Heading */
+.sendh2 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 0 0 28px;
+  color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+
+.send {
+  width: 40px;
+  height: 40px;
+}
+
+/* replaces the "______" text line */
+.linecontact {
+  flex: 1;
+  min-width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #b7ff3c, transparent);
+}
+
+/* Form layout */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+}
+
+/* Inputs */
+.field input,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 18px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #b7ff3c;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field textarea {
+  height: auto;
+  min-height: 130px;
+  padding: 14px 18px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.field input:hover,
+.field textarea:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #b7ff3c;
+  background: rgba(183, 255, 60, 0.05);
+  box-shadow: 0 0 0 3px rgba(183, 255, 60, 0.18);
+}
+
+/* Button */
+.bottomsend {
+  grid-column: 1 / -1;
+  height: 54px;
+  width: 100%;
+  margin-top: 6px;
+  border: none;
+  border-radius: 12px;
+  background: #b7ff3c;
+  color: #111;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bottomsend:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(183, 255, 60, 0.3);
+}
+
+.bottomsend:active {
+  transform: translateY(0);
+}
+
+.bottomsend:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contactrighy {
+    width: 100%;
+    margin-right: 0;
+    padding: 24px 20px 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
 }

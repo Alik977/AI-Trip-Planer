@@ -1,4 +1,3 @@
-
 import Navbar from "./components/Navbar.jsx";
 import Home from "../pages/Home.jsx";
 import Planner from "../pages/Planner.jsx";
@@ -6,13 +5,17 @@ import Distination from "./components/DestinationCard.jsx";
 import About from "../pages/About.jsx";
 import Contact from "./components/Contact.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import arrowup from ".//assets/img/icon/arrow-up.png";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
+     <a href="#top">
+        <img src={arrowup} alt="" className="arrow" />
+      </a>
       <Navbar />
+     
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,4 +33,3 @@ function App() {
 }
 
 export default App;
-
