@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import destinations from "../data/destinations";
+import { useNavigate } from "react-router-dom";
 import "../components/Global.css";
 
 function Distination() {
+    const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [selectedDestination, setSelectedDestination] = useState(null);
 
@@ -154,16 +156,19 @@ function Distination() {
               </div>
 
               <button
-                className="modal-plan-button"
-                onClick={() => {
-                  console.log(
-                    "Plan trip to:",
-                    selectedDestination.city
-                  );
-                }}
-              >
-                Plan My Trip ✨
-              </button>
+  className="modal-plan-button"
+  type="button"
+  onClick={() => {
+    navigate("/planner", {
+      state: {
+        prompt: selectedDestination.city,
+        country: selectedDestination.country,
+      },
+    });
+  }}
+>
+  Plan My Trip ✨
+</button>
 
             </div>
 
