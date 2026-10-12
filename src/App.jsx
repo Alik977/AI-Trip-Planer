@@ -6,6 +6,7 @@ import About from "../pages/About.jsx";
 import Contact from "./components/Contact.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import arrowup from ".//assets/img/icon/arrow-up.png";
+import "./services/security.js"
 import "./App.css";
 
 function App() {
