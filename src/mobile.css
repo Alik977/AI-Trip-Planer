@@ -1,0 +1,499 @@
+/* Mobile-only layout improvements.
+   Desktop styling is intentionally left unchanged. */
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  html, body, #root {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  /* Navigation: compact header + expandable menu */
+  .Navbar {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    padding: 7px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .imglogo {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(183, 255, 60, .7);
+    border-radius: 12px;
+    color: #b7ff3c;
+    background: rgba(0, 0, 0, .55);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .navbarlist {
+    display: none;
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    padding: 10px;
+    gap: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(8, 8, 8, .97);
+    border: 1px solid rgba(183, 255, 60, .22);
+    border-radius: 14px;
+  }
+
+  .navbarlist.is-open {
+    display: flex;
+  }
+
+  .navbarlist .list {
+    display: block;
+    width: 100%;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  .navbarlist li {
+    display: block;
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .navbarbutton {
+    display: none;
+  }
+
+  /* Home page */
+  .aiplaner {
+    min-height: calc(100vh - 80px);
+    overflow: hidden;
+  }
+
+  .home {
+    padding: 24px 18px 8px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .homeleft {
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .homeparagraph {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .homeleft h1,
+  .homeh1 h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .travelparagraph {
+    margin-top: 12px;
+    font-size: clamp(18px, 5vw, 24px);
+    line-height: 1.4;
+  }
+
+  .plantext {
+    width: 76px;
+    height: auto;
+    max-width: 24%;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .homeright {
+    width: 100%;
+    height: auto;
+  }
+
+  .homeright img {
+    width: 100%;
+    height: auto;
+    max-height: 330px;
+    object-fit: contain;
+  }
+
+  .homebottom,
+  .homebottom1 {
+    width: 100%;
+    padding: 16px 18px;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .tripinput,
+  .tripinput1 {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .tripinput input,
+  .tripinput1 input {
+    min-width: 0;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .tripaibutton,
+  .tripaibutton1 {
+    width: 100%;
+    min-height: 48px;
+    height: auto;
+    padding: 13px 16px;
+    font-size: 14px;
+  }
+
+  .travel-slider {
+    width: 100%;
+    height: min(108vw, 420px);
+    max-height: 420px;
+    margin: 0 auto 18px;
+    perspective: 900px;
+  }
+
+  .slides-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .travel-slide {
+    width: min(58vw, 230px);
+  }
+
+  .slide-info {
+    left: 15px;
+    bottom: 20px;
+  }
+
+  .slide-info h2 {
+    font-size: 24px;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Trip planner */
+  .Aiplanner {
+    width: 100%;
+    padding: 10px 16px 30px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .Aitripleft,
+  .Aitripright,
+  .AitripH1,
+  .formtrip {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .AitripH1 {
+    padding: 14px 0;
+    gap: 10px;
+  }
+
+  .AitripH1 h1 {
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.15;
+  }
+
+  .AitripH1 p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .formtrip {
+    padding: 12px 0;
+  }
+
+  .formtext,
+  .formtext1 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  .gotrip,
+  .Moneytrip,
+  .daytrip {
+    display: block;
+    margin: 12px 0 8px;
+    font-size: 14px;
+  }
+
+  .preferences {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 0;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  .buttons button {
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  .ai-loader {
+    transform: scale(.82);
+    transform-origin: center;
+    margin: -10px auto;
+  }
+
+  /* About page */
+  .aboutallme {
+    width: 100%;
+    padding: 32px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .aboutus {
+    letter-spacing: 2px;
+  }
+
+  .more {
+    width: 100%;
+    font-size: clamp(32px, 8vw, 42px);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+
+  .about-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .imageaboi {
+    width: 100%;
+    height: min(75vw, 330px);
+    object-fit: cover;
+  }
+
+  .about-stats {
+    flex-wrap: wrap;
+    gap: 16px 22px;
+  }
+
+  .about-stat {
+    min-width: 0;
+    padding: 0;
+  }
+
+  /* Destinations page */
+  .distaiplanner {
+    padding: 10px 14px 28px;
+  }
+
+  .popular-section {
+    padding: 16px 0;
+  }
+
+  .popular-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .popular-header h2 {
+    font-size: 22px;
+  }
+
+  .destination-search {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .destination-card {
+    min-width: 0;
+    height: clamp(150px, 48vw, 220px);
+  }
+
+  .destination-content {
+    padding: 10px;
+  }
+
+  .destination-modal-background {
+    padding: 14px;
+    align-items: center;
+  }
+
+  .destination-modal {
+    width: 100%;
+    max-width: 440px;
+    max-height: 90dvh;
+    overflow-y: auto;
+  }
+
+  .modal-image {
+    width: 100%;
+    max-height: 36vh;
+    object-fit: cover;
+  }
+
+  .modal-content {
+    padding: 16px;
+  }
+
+  .modal-content h2 {
+    font-size: 23px;
+  }
+
+  /* Contact page */
+  .allcontact {
+    min-height: 100vh;
+    background-attachment: scroll;
+    background-position: center;
+  }
+
+  .leftblock,
+  .contactinfo {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .leftblokh1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .contact,
+  .formscontact,
+  .contactrighy {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .formscontact {
+    padding: 18px;
+  }
+
+  .contactrighy {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+
+  .contact-form {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .field-full,
+  .bottomsend {
+    grid-column: 1;
+  }
+
+  .sendh2 {
+    font-size: 1.3rem;
+    gap: 10px;
+  }
+
+  .field input,
+  .field textarea {
+    font-size: 16px;
+  }
+
+  .arrow {
+    width: 36px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 50;
+  }
+
+  /* Avoid accidental horizontal scroll from fixed desktop widths */
+  img, video, canvas, iframe {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .imglogo {
+    width: 62px;
+    height: 62px;
+  }
+
+  .home {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .homebottom,
+  .homebottom1 {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-card {
+    height: 220px;
+  }
+
+  .buttons button {
+    flex: 1 1 auto;
+  }
+}

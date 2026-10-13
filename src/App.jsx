@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import arrowup from ".//assets/img/icon/arrow-up.png";
 import "./services/security.js"
 import "./App.css";
+import "./mobile.css";
 
 function App() {
   return (
