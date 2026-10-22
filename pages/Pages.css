@@ -109,6 +109,15 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(183, 255, 60, 0.25);
 }
+.navbarbutton{
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+.buttonnav {
+  text-decoration: none;
+}
 /****Tripplaner*****/
 .AitripH1 {
   color: white;

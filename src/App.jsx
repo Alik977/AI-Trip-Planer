@@ -6,6 +6,7 @@ import About from "../pages/About.jsx";
 import Contact from "./components/Contact.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import arrowup from ".//assets/img/icon/arrow-up.png";
+import Signup from "../pages/SignUp.jsx";
 import "./services/security.js"
 import "./App.css";
 import "./mobile.css";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/Dest" element={<Distination />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
+          <Route path="/sign" element={<Signup/>} />
       </Routes>
     </BrowserRouter>
   );

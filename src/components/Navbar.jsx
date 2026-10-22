@@ -40,9 +40,11 @@ function Navbar() {
         </NavLink>
       </div>
 
-      <div className="navbarbutton">
-        <button className="buttonnav">Sign IN</button>
-      </div>
+  <div className="navbarbutton">
+  <NavLink to="/sign" className="buttonnav">
+    Sign Up
+  </NavLink>
+</div>
     </div>
   );
 }
