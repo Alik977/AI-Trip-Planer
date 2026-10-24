@@ -1072,7 +1072,28 @@ body {
 
   pointer-events: none;
 }
-
+.formall{
+  padding: 20px 40px;
+}
+.signh1{
+  color: #b6ff00;
+}
+.signleft{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+.signleft h1{
+  width: 281px;
+ 
+}
+.signleft p{
+ 
+  width: 300px;
+}
+.planesign{
+  width: 300px;
+  height: 200px;
+}
 /* =========================
    RESPONSIVE
 ========================= */
